@@ -1,0 +1,2208 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: 0.0.0.0
+mode: rule
+log-level: info
+external-controller: 0.0.0.0:9090
+external-ui: ui
+secret: '123456'
+ipv6: false
+tun:
+  enable: false
+  stack: system
+  dns-hijack:
+    - any:53
+dns:
+  enable: true
+  listen: 0.0.0.0:1053
+  ipv6: false
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  fallback:
+    - https://1.0.0.1/dns-query
+    - tls://dns.google
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+proxies:
+  - name: DeVPN-KR-0
+    type: vmess
+    server: sLxXvGpJqxqfBrNX.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: sLxXvGpJqxqfBrNX.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: sLxXvGpJqxqfBrNX.v.3dns.vip
+  - name: DeVPN-KR-1
+    type: vmess
+    server: tIf6TeFTGlqbQaji.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: tIf6TeFTGlqbQaji.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: tIf6TeFTGlqbQaji.v.3dns.vip
+  - name: DeVPN-KR-2
+    type: vmess
+    server: r4Md68yIaB8qVbn1.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: r4Md68yIaB8qVbn1.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: r4Md68yIaB8qVbn1.v.3dns.vip
+  - name: DeVPN-KR-3
+    type: vmess
+    server: 1Nd4p5PSJdmd0MUn.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 1Nd4p5PSJdmd0MUn.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 1Nd4p5PSJdmd0MUn.v.3dns.vip
+  - name: DeVPN-KR-4
+    type: vmess
+    server: VDHxrIDpvxmNnWiZ.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: VDHxrIDpvxmNnWiZ.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: VDHxrIDpvxmNnWiZ.v.3dns.vip
+  - name: DeVPN-KR-5
+    type: vmess
+    server: StMONzfjYcGgEOmG.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: StMONzfjYcGgEOmG.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: StMONzfjYcGgEOmG.v.3dns.vip
+  - name: DeVPN-KR-6
+    type: vmess
+    server: Soc0P5rhtgUKJjRF.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: Soc0P5rhtgUKJjRF.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: Soc0P5rhtgUKJjRF.v.3dns.vip
+  - name: DeVPN-KR-7
+    type: vmess
+    server: TK2iQZH6vNyLFOHl.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: TK2iQZH6vNyLFOHl.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: TK2iQZH6vNyLFOHl.v.3dns.vip
+  - name: DeVPN-KR-8
+    type: vmess
+    server: vN6DtwoRjLP7shwA.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: vN6DtwoRjLP7shwA.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: vN6DtwoRjLP7shwA.v.3dns.vip
+  - name: DeVPN-KR-9
+    type: vmess
+    server: KggmExDzPgl7qL4z.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: KggmExDzPgl7qL4z.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: KggmExDzPgl7qL4z.v.3dns.vip
+  - name: DeVPN-SG-0
+    type: vmess
+    server: plhmocNlrP2pvq3k.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: plhmocNlrP2pvq3k.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: plhmocNlrP2pvq3k.v.3dns.vip
+  - name: DeVPN-SG-1
+    type: vmess
+    server: hcrdUdbABV66NEyQ.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: hcrdUdbABV66NEyQ.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: hcrdUdbABV66NEyQ.v.3dns.vip
+  - name: DeVPN-SG-2
+    type: vmess
+    server: xJEaPAGjKcLjkTGH.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: xJEaPAGjKcLjkTGH.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: xJEaPAGjKcLjkTGH.v.3dns.vip
+  - name: DeVPN-SG-3
+    type: vmess
+    server: 2RfhtrE1ixBRs0H0.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 2RfhtrE1ixBRs0H0.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 2RfhtrE1ixBRs0H0.v.3dns.vip
+  - name: DeVPN-SG-4
+    type: vmess
+    server: PPF7WCBygaOuWlS4.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: PPF7WCBygaOuWlS4.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: PPF7WCBygaOuWlS4.v.3dns.vip
+  - name: DeVPN-SG-5
+    type: vmess
+    server: gGOw9Zeq00S58vwF.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: gGOw9Zeq00S58vwF.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: gGOw9Zeq00S58vwF.v.3dns.vip
+  - name: DeVPN-SG-6
+    type: vmess
+    server: LArfvFfxRmPtSGUI.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: LArfvFfxRmPtSGUI.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: LArfvFfxRmPtSGUI.v.3dns.vip
+  - name: DeVPN-SG-7
+    type: vmess
+    server: WTemo8ZrndxoRkRD.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: WTemo8ZrndxoRkRD.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: WTemo8ZrndxoRkRD.v.3dns.vip
+  - name: DeVPN-SG-8
+    type: vmess
+    server: Uv221zzAlN7N6PNB.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: Uv221zzAlN7N6PNB.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: Uv221zzAlN7N6PNB.v.3dns.vip
+  - name: DeVPN-SG-9
+    type: vmess
+    server: Ngf27EfQbvn6CWZz.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: Ngf27EfQbvn6CWZz.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: Ngf27EfQbvn6CWZz.v.3dns.vip
+  - name: DeVPN-JP-0
+    type: vmess
+    server: Col2nNIH9svQ7Z0g.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: Col2nNIH9svQ7Z0g.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: Col2nNIH9svQ7Z0g.v.3dns.vip
+  - name: DeVPN-JP-1
+    type: vmess
+    server: oOsi4xokJBrOOdIU.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: oOsi4xokJBrOOdIU.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: oOsi4xokJBrOOdIU.v.3dns.vip
+  - name: DeVPN-JP-2
+    type: vmess
+    server: qZQhWEMK55QDvD55.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: qZQhWEMK55QDvD55.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: qZQhWEMK55QDvD55.v.3dns.vip
+  - name: DeVPN-JP-3
+    type: vmess
+    server: cNQo1Ta28CEbi0ps.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: cNQo1Ta28CEbi0ps.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: cNQo1Ta28CEbi0ps.v.3dns.vip
+  - name: DeVPN-JP-4
+    type: vmess
+    server: utbKfRhAU1BVFCwe.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: utbKfRhAU1BVFCwe.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: utbKfRhAU1BVFCwe.v.3dns.vip
+  - name: DeVPN-JP-5
+    type: vmess
+    server: AisIaunryP7JHasB.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: AisIaunryP7JHasB.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: AisIaunryP7JHasB.v.3dns.vip
+  - name: DeVPN-JP-6
+    type: vmess
+    server: nlxwfbyEisTF1QmL.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: nlxwfbyEisTF1QmL.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: nlxwfbyEisTF1QmL.v.3dns.vip
+  - name: DeVPN-JP-7
+    type: vmess
+    server: 2m28TbSM5mN8yMu1.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 2m28TbSM5mN8yMu1.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 2m28TbSM5mN8yMu1.v.3dns.vip
+  - name: DeVPN-JP-8
+    type: vmess
+    server: 9iiGm1pEjdOXQkDJ.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 9iiGm1pEjdOXQkDJ.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 9iiGm1pEjdOXQkDJ.v.3dns.vip
+  - name: DeVPN-JP-9
+    type: vmess
+    server: Ihqvc0H7viuFfFZH.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: Ihqvc0H7viuFfFZH.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: Ihqvc0H7viuFfFZH.v.3dns.vip
+  - name: DeVPN-DE-0
+    type: vmess
+    server: z0PQNWn0HY2FExTr.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: z0PQNWn0HY2FExTr.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: z0PQNWn0HY2FExTr.v.3dns.vip
+  - name: DeVPN-DE-1
+    type: vmess
+    server: EwKrslzTlAZVqwb1.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: EwKrslzTlAZVqwb1.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: EwKrslzTlAZVqwb1.v.3dns.vip
+  - name: DeVPN-DE-2
+    type: vmess
+    server: JKXTYQqzQKtryv9M.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: JKXTYQqzQKtryv9M.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: JKXTYQqzQKtryv9M.v.3dns.vip
+  - name: DeVPN-DE-3
+    type: vmess
+    server: aemw5rTEWKmlQ7TD.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: aemw5rTEWKmlQ7TD.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: aemw5rTEWKmlQ7TD.v.3dns.vip
+  - name: DeVPN-DE-4
+    type: vmess
+    server: Z80f2vI5A0iaLUeb.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: Z80f2vI5A0iaLUeb.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: Z80f2vI5A0iaLUeb.v.3dns.vip
+  - name: DeVPN-DE-5
+    type: vmess
+    server: pvs4yZSdzrvdvQfS.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: pvs4yZSdzrvdvQfS.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: pvs4yZSdzrvdvQfS.v.3dns.vip
+  - name: DeVPN-DE-6
+    type: vmess
+    server: E0oH26a4x8uhLDQm.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: E0oH26a4x8uhLDQm.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: E0oH26a4x8uhLDQm.v.3dns.vip
+  - name: DeVPN-DE-7
+    type: vmess
+    server: d1jIFkvAp2teXPTg.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: d1jIFkvAp2teXPTg.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: d1jIFkvAp2teXPTg.v.3dns.vip
+  - name: DeVPN-DE-8
+    type: vmess
+    server: lD4psegaIaoF79ae.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: lD4psegaIaoF79ae.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: lD4psegaIaoF79ae.v.3dns.vip
+  - name: DeVPN-DE-9
+    type: vmess
+    server: 7JEB4hWR1T2i8tRx.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 7JEB4hWR1T2i8tRx.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 7JEB4hWR1T2i8tRx.v.3dns.vip
+  - name: DeVPN-HK-0
+    type: vmess
+    server: RsUz11eNnSkD3c43.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: RsUz11eNnSkD3c43.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: RsUz11eNnSkD3c43.v.3dns.vip
+  - name: DeVPN-HK-1
+    type: vmess
+    server: q5NLeXSCphTOnayd.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: q5NLeXSCphTOnayd.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: q5NLeXSCphTOnayd.v.3dns.vip
+  - name: DeVPN-HK-2
+    type: vmess
+    server: FmV2qU7P13kwIfGf.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: FmV2qU7P13kwIfGf.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: FmV2qU7P13kwIfGf.v.3dns.vip
+  - name: DeVPN-HK-3
+    type: vmess
+    server: DeaMkzX2syEMSCys.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: DeaMkzX2syEMSCys.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: DeaMkzX2syEMSCys.v.3dns.vip
+  - name: DeVPN-HK-4
+    type: vmess
+    server: wM6FIqthBNtH5TLC.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: wM6FIqthBNtH5TLC.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: wM6FIqthBNtH5TLC.v.3dns.vip
+  - name: DeVPN-HK-5
+    type: vmess
+    server: NwJ3CoNGdwtUmwUw.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: NwJ3CoNGdwtUmwUw.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: NwJ3CoNGdwtUmwUw.v.3dns.vip
+  - name: DeVPN-HK-6
+    type: vmess
+    server: nzAC06AnxD97UmES.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: nzAC06AnxD97UmES.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: nzAC06AnxD97UmES.v.3dns.vip
+  - name: DeVPN-HK-7
+    type: vmess
+    server: XhTW2A8mlYi1BwwJ.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: XhTW2A8mlYi1BwwJ.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: XhTW2A8mlYi1BwwJ.v.3dns.vip
+  - name: DeVPN-HK-8
+    type: vmess
+    server: SanQoHSUO7INYTMU.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: SanQoHSUO7INYTMU.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: SanQoHSUO7INYTMU.v.3dns.vip
+  - name: DeVPN-HK-9
+    type: vmess
+    server: QlxYtBpuqj3qqJsJ.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: QlxYtBpuqj3qqJsJ.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: QlxYtBpuqj3qqJsJ.v.3dns.vip
+  - name: DeVPN-US-0
+    type: vmess
+    server: wGqrF6v6wtklPYTQ.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: wGqrF6v6wtklPYTQ.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: wGqrF6v6wtklPYTQ.v.3dns.vip
+  - name: DeVPN-US-1
+    type: vmess
+    server: 8jfzizi7vcnWy5Tx.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 8jfzizi7vcnWy5Tx.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 8jfzizi7vcnWy5Tx.v.3dns.vip
+  - name: DeVPN-US-2
+    type: vmess
+    server: rjJL0pGfvx4qiYuq.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: rjJL0pGfvx4qiYuq.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: rjJL0pGfvx4qiYuq.v.3dns.vip
+  - name: DeVPN-US-3
+    type: vmess
+    server: SGZapY57ylDIB0Hr.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: SGZapY57ylDIB0Hr.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: SGZapY57ylDIB0Hr.v.3dns.vip
+  - name: DeVPN-US-4
+    type: vmess
+    server: YxbTSmUC2MSgY9l7.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: YxbTSmUC2MSgY9l7.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: YxbTSmUC2MSgY9l7.v.3dns.vip
+  - name: DeVPN-US-5
+    type: vmess
+    server: 6yroMvvgdymD2u56.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 6yroMvvgdymD2u56.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 6yroMvvgdymD2u56.v.3dns.vip
+  - name: DeVPN-US-6
+    type: vmess
+    server: MnZ7fdPnNdBhXb1o.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: MnZ7fdPnNdBhXb1o.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: MnZ7fdPnNdBhXb1o.v.3dns.vip
+  - name: DeVPN-US-7
+    type: vmess
+    server: B5HBePoNm24C2ToY.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: B5HBePoNm24C2ToY.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: B5HBePoNm24C2ToY.v.3dns.vip
+  - name: DeVPN-US-8
+    type: vmess
+    server: Av2TbFA6o3zEMZvL.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: Av2TbFA6o3zEMZvL.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: Av2TbFA6o3zEMZvL.v.3dns.vip
+  - name: DeVPN-US-9
+    type: vmess
+    server: jljtks4aoJMhnyIX.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: jljtks4aoJMhnyIX.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: jljtks4aoJMhnyIX.v.3dns.vip
+  - name: DeVPN-ID-0
+    type: vmess
+    server: nnC6qmd3wukHOkWb.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: nnC6qmd3wukHOkWb.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: nnC6qmd3wukHOkWb.v.3dns.vip
+  - name: DeVPN-ID-1
+    type: vmess
+    server: 4a4aaCHSdTQzORBM.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 4a4aaCHSdTQzORBM.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 4a4aaCHSdTQzORBM.v.3dns.vip
+  - name: DeVPN-ID-2
+    type: vmess
+    server: nNmAPN2G8VAaaGeq.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: nNmAPN2G8VAaaGeq.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: nNmAPN2G8VAaaGeq.v.3dns.vip
+  - name: DeVPN-ID-3
+    type: vmess
+    server: 0a3YxBsH5ZHKAeqJ.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 0a3YxBsH5ZHKAeqJ.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 0a3YxBsH5ZHKAeqJ.v.3dns.vip
+  - name: DeVPN-ID-4
+    type: vmess
+    server: M8iOJestDXEQMDcD.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: M8iOJestDXEQMDcD.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: M8iOJestDXEQMDcD.v.3dns.vip
+  - name: DeVPN-ID-5
+    type: vmess
+    server: oyxgXPNauUzjVnle.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: oyxgXPNauUzjVnle.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: oyxgXPNauUzjVnle.v.3dns.vip
+  - name: DeVPN-ID-6
+    type: vmess
+    server: EDzxRVTar32m9aRi.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: EDzxRVTar32m9aRi.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: EDzxRVTar32m9aRi.v.3dns.vip
+  - name: DeVPN-ID-7
+    type: vmess
+    server: 1uBwolvmDqUPjL5i.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: 1uBwolvmDqUPjL5i.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: 1uBwolvmDqUPjL5i.v.3dns.vip
+  - name: DeVPN-ID-8
+    type: vmess
+    server: BQ3Yt4J7sDcOeMDS.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: BQ3Yt4J7sDcOeMDS.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: BQ3Yt4J7sDcOeMDS.v.3dns.vip
+  - name: DeVPN-ID-9
+    type: vmess
+    server: udqqvjBuYI0hje5t.v.3dns.vip
+    port: 443
+    uuid: 4fdd818a11ed413dae0934e13fa8e13d
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: udqqvjBuYI0hje5t.v.3dns.vip
+    network: ws
+    ws-path: /ws-vmess
+    ws-headers:
+      Host: udqqvjBuYI0hje5t.v.3dns.vip
+  - name: NewYork_PAC
+    type: ss
+    server: 199.127.152.29
+    port: 18443
+    password: kito1TZGtKyqAOQ8
+    cipher: aes-256-gcm
+  - name: Singapore
+    type: ss
+    server: 103.115.17.239
+    port: 8388
+    password: Gw2rYjSCojoeOjVT
+    cipher: aes-256-gcm
+  - name: Japan
+    type: ss
+    server: 167.17.179.93
+    port: 8388
+    password: KVR5xUsp2B3p88Uy
+    cipher: aes-256-gcm
+  - name: HongKong
+    type: ss
+    server: 91.149.236.106
+    port: 8388
+    password: PTStOhUo3owuLdWa
+    cipher: aes-256-gcm
+  - name: France
+    type: ss
+    server: 185.22.153.117
+    port: 18443
+    password: NTiHBg64fsY8u8DbGrtypD9gPGSL386p
+    cipher: aes-256-gcm
+  - name: Thailand
+    type: ss
+    server: 86.107.50.242
+    port: 18443
+    password: dmJDtsxs41dBer8X
+    cipher: aes-256-gcm
+  - name: Australia
+    type: ss
+    server: 46.29.164.13
+    port: 18443
+    password: Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE
+    cipher: aes-256-gcm
+  - name: Montreal
+    type: ss
+    server: 46.17.47.58
+    port: 18443
+    password: cCMJgJTA3BA489YUYrFq7XHXSiSpWlLa
+    cipher: aes-256-gcm
+  - name: Italy
+    type: ss
+    server: 2.56.242.207
+    port: 18443
+    password: PMaWKfOrCdResU4Zi
+    cipher: aes-256-gcm
+  - name: British
+    type: ss
+    server: 185.22.153.118
+    port: 18443
+    password: BCUpLQqELzCOcX9GnNXn8k0
+    cipher: aes-256-gcm
+  - name: HongKong_1
+    type: ss
+    server: 91.149.236.104
+    port: 18443
+    password: IiMpcTnv3eXVF6uHSHLuv7xNfE
+    cipher: aes-256-gcm
+  - name: Russia
+    type: ss
+    server: 185.22.153.114
+    port: 18443
+    password: P
+    cipher: aes-256-gcm
+  - name: shadowsocks-1827146270
+    type: ss
+    server: 149.22.87.240
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - name: shadowsocks-1870576255
+    type: ss
+    server: 128.1.186.73
+    port: 8080
+    password: 14fFPrbezE3HDZzsMOr6
+    cipher: rc4-md5
+  - name: shadowsocks-1870576345
+    type: ss
+    server: 79.110.54.250
+    port: 8080
+    password: 14fFPrbezE3HDZzsMOr6
+    cipher: rc4-md5
+  - name: shadowsocks-1827963705
+    type: ss
+    server: 107.155.57.11
+    port: 8080
+    password: 14fFPrbezE3HDZzsMOr6
+    cipher: rc4-md5
+  - name: shadowsocks-1827962976
+    type: ss
+    server: 107.151.182.197
+    port: 8080
+    password: 14fFPrbezE3HDZzsMOr6
+    cipher: rc4-md5
+  - name: shadowsocks-1827963676
+    type: ss
+    server: 107.155.57.51
+    port: 8080
+    password: 14fFPrbezE3HDZzsMOr6
+    cipher: rc4-md5
+  - name: shadowsocks-1827969041
+    type: ss
+    server: 23.251.121.242
+    port: 8080
+    password: 14fFPrbezE3HDZzsMOr6
+    cipher: rc4-md5
+  - name: shadowsocks-1827146549
+    type: ss
+    server: 156.146.38.170
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - name: shadowsocks-1827146742
+    type: ss
+    server: 37.19.198.244
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - name: shadowsocks-1827146667
+    type: ss
+    server: 173.244.56.9
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - name: shadowsocks-1827146815
+    type: ss
+    server: 156.146.38.168
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - name: shadowsocks-1827147187
+    type: ss
+    server: 51.222.136.236
+    port: 8882
+    password: kDWvXYZoTBcGkC4
+    cipher: aes-256-gcm
+  - name: shadowsocks-1827964140
+    type: ss
+    server: 138.197.141.58
+    port: 8080
+    password: 14fFPrbezE3HDZzsMOr6
+    cipher: rc4-md5
+  - name: shadowsocks-1875023016
+    type: ss
+    server: 185.230.230.18
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+  - name: shadowsocks-1827146083
+    type: ss
+    server: 82.38.31.17
+    port: 8080
+    password: oZIoA69Q8yhcQV8ka3Pa3A
+    cipher: chacha20-ietf-poly1305
+  - name: shadowsocks-1875023048
+    type: ss
+    server: 202.50.253.72
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+  - name: shadowsocks-1827146769
+    type: ss
+    server: 82.38.31.66
+    port: 8080
+    password: oZIoA69Q8yhcQV8ka3Pa3A
+    cipher: chacha20-ietf-poly1305
+  - name: shadowsocks-1827146486
+    type: ss
+    server: 82.38.31.175
+    port: 443
+    password: oZIoA69Q8yhcQV8ka3Pa3A
+    cipher: chacha20-ietf-poly1305
+  - name: shadowsocks-1827145981
+    type: ss
+    server: 82.38.31.201
+    port: 8080
+    password: k1dBOmOB4oqi7Ump37a1bQ
+    cipher: chacha20-ietf-poly1305
+  - name: shadowsocks-1827145964
+    type: ss
+    server: 82.38.31.61
+    port: 8080
+    password: oZIoA69Q8yhcQV8ka3Pa3A
+    cipher: chacha20-ietf-poly1305
+  - name: shadowsocks-1827146086
+    type: ss
+    server: 82.38.31.171
+    port: 8080
+    password: oZIoA69Q8yhcQV8ka3Pa3A
+    cipher: chacha20-ietf-poly1305
+  - name: shadowsocks-1827146026
+    type: ss
+    server: 82.38.31.34
+    port: 8080
+    password: oZIoA69Q8yhcQV8ka3Pa3A
+    cipher: chacha20-ietf-poly1305
+  - name: shadowsocks-1827147777
+    type: ss
+    server: 146.70.61.37
+    port: 8080
+    password: 14fFPrbezE3HDZzsMOr6
+    cipher: rc4-md5
+  - name: trojan-1939846065
+    type: trojan
+    server: 149.28.130.108
+    port: 443
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    servername: searchcreativejobsandshowcaseyourartistictalents.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+  - name: trojan-1827188340
+    type: trojan
+    server: 139.180.146.200
+    port: 8886
+    password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
+    servername: 139.180.146.200
+    skip-cert-verify: false
+    client-fingerprint: chrome
+  - name: vmess-1837386984
+    type: vmess
+    server: 149.88.23.202
+    port: 18000
+    uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+    alterId: 0
+    cipher: auto
+  - name: vmess-1853342713
+    type: vmess
+    server: 149.88.23.207
+    port: 18000
+    uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+    alterId: 0
+    cipher: auto
+  - name: vmess-1853348092
+    type: vmess
+    server: ww11.levikogjgfdd.ir
+    port: 18000
+    uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+    alterId: 0
+    cipher: auto
+  - name: shadowsocks-1827146287
+    type: ss
+    server: 149.22.87.241
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - name: shadowsocks-1827146197
+    type: ss
+    server: 149.22.87.204
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - name: shadowsocks-1827146224
+    type: ss
+    server: 149.22.95.183
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - name: shadowsocks-1827146248
+    type: ss
+    server: 37.19.198.160
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - name: shadowsocks-1875023009
+    type: ss
+    server: 202.50.253.27
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+  - name: shadowsocks-1875023013
+    type: ss
+    server: 185.176.204.18
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+  - name: shadowsocks-1830344687
+    type: ss
+    server: 178.83.185.156
+    port: 8080
+    password: oZIoA69Q8yhcQV8ka3Pa3A
+    cipher: chacha20-ietf-poly1305
+  - name: trojan-1932509804
+    type: trojan
+    server: 45.63.30.142
+    port: 443
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    servername: 45.63.30.142
+    skip-cert-verify: false
+    client-fingerprint: chrome
+  - name: vmess-1827158757
+    type: vmess
+    server: 169.197.142.22
+    port: 18000
+    uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+    alterId: 0
+    cipher: auto
+  - name: vmess-1853348260
+    type: vmess
+    server: 84.17.41.2
+    port: 18000
+    uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+    alterId: 0
+    cipher: auto
+  - name: vmess-1828338235
+    type: vmess
+    server: 134.195.196.211
+    port: 18000
+    uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+    alterId: 0
+    cipher: auto
+  - name: shadowsocks-1827146336
+    type: ss
+    server: 84.247.155.196
+    port: 443
+    password: 3eOFeNssde7PYYMv
+    cipher: aes-256-gcm
+  - name: shadowsocks-1828226964
+    type: ss
+    server: 68.183.227.236
+    port: 8080
+    password: 14fFPrbezE3HDZzsMOr6
+    cipher: rc4-md5
+  - name: shadowsocks-1827146556
+    type: ss
+    server: 156.146.38.167
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - name: shadowsocks-1827146122
+    type: ss
+    server: 37.19.198.236
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - name: shadowsocks-1827147479
+    type: ss
+    server: 137.184.174.93
+    port: 8080
+    password: 14fFPrbezE3HDZzsMOr6
+    cipher: rc4-md5
+  - name: shadowsocks-1875022941
+    type: ss
+    server: 193.151.160.9
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+  - name: shadowsocks-1827146619
+    type: ss
+    server: 102.37.156.224
+    port: 443
+    password: aduB9HGxQHjA2SBMRjkHX6
+    cipher: chacha20-ietf-poly1305
+  - name: shadowsocks-1827145971
+    type: ss
+    server: 82.38.31.11
+    port: 8080
+    password: oZIoA69Q8yhcQV8ka3Pa3A
+    cipher: chacha20-ietf-poly1305
+  - name: trojan-1827149654
+    type: trojan
+    server: 45.32.52.173
+    port: 8886
+    password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
+    servername: 45.32.52.173
+    skip-cert-verify: false
+    client-fingerprint: chrome
+  - name: trojan-1939846054
+    type: trojan
+    server: kr002.zestapp778.com
+    port: 48851
+    password: 5t6i121em5lkmsmk
+    servername: kr002.zestapp778.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+  - name: trojan-1849374991
+    type: trojan
+    server: 66.23.203.21
+    port: 59689
+    password: ae7eb4dwyaz25pxwgq59
+    servername: 66.23.203.21
+    skip-cert-verify: false
+    client-fingerprint: chrome
+  - name: trojan-1946595155
+    type: trojan
+    server: in002.zestapp778.com
+    port: 42733
+    password: 5t6i121em5lkmsmk
+    servername: in002.zestapp778.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+  - name: _Alirewa-3
+    type: ss
+    server: admin.c2.havij.co
+    port: 443
+    password: kaQH3hGdcP80XEDI
+    cipher: chacha20-ietf-poly1305
+  - name: _ConfigforVPN
+    type: vmess
+    server: ips.configforvpn.fun
+    port: 8880
+    uuid: da28c85e-e71b-4554-a9fc-162bc94c7cb0
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: root.configforvpn.fun
+  - name: _ConfigforVPN_1
+    type: vmess
+    server: shahinnet-freenetcdn.melodyshopone2.ir
+    port: 8080
+    uuid: 96588912-3bcb-491c-8ce3-7a965bbec07f
+    alterId: 0
+    cipher: auto
+    network: ws
+    ws-path: /
+    ws-headers:
+      Host: sog.shahinnet.shop
+  - name: _Alirewa-11
+    type: trojan
+    server: 188.114.96.1
+    port: 2083
+    password: nzrc4ma4087c1ukr
+    servername: dl2.rahetejarat.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-path: /WWEiIlL225IiiILl
+    ws-headers:
+      Host: dl1.rahetejarat.com
+  - name: _Alirewa-18
+    type: trojan
+    server: 45.128.76.242
+    port: 443
+    password: humanity
+    servername: www.trusteeforward.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-path: /assignment
+    ws-headers:
+      Host: www.trusteeforward.com
+  - name: _Alirewa-33
+    type: ss
+    server: 79.137.99.183
+    port: 19999
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    cipher: aes-256-gcm
+  - name: _Alirewa-38
+    type: ss
+    server: 20.166.20.135
+    port: 443
+    password: G2shlbeRXdE45aVA
+    cipher: chacha20-ietf-poly1305
+  - name: _Alirewa-40
+    type: ss
+    server: 185.223.93.28
+    port: 42564
+    password: whlqBUAJv5jOfRwNSZbbpa
+    cipher: chacha20-ietf-poly1305
+  - name: _Alirewa-41
+    type: trojan
+    server: 216.152.147.74
+    port: 443
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    servername: api.connectingpeoplewithgreatjobs.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+  - name: _Alirewa-44
+    type: ss
+    server: 134.209.177.114
+    port: 22277
+    password: YVSX9nL1XNZUoIXL8PPkaYiV7sRXiKKiy2EwbRoCUoA=
+    cipher: 2022-blake3-aes-256-gcm
+  - name: _Alirewa-45
+    type: ss
+    server: 51.89.118.24
+    port: 8080
+    password: 2KvnGnr4/l3OiRf4Hb2Q3GMbK5/HbTfzJW/rKd/u250=
+    cipher: 2022-blake3-aes-256-gcm
+  - name: _Alirewa-47
+    type: trojan
+    server: 188.114.97.6
+    port: 443
+    password: mitivpn
+    servername: d-e.mitivpn.in.net
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/--@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
+    ws-headers:
+      Host: d-e.mitivpn.in.net
+  - name: _Alirewa-48
+    type: ss
+    server: 4.210.68.244
+    port: 443
+    password: UUjphkQAh5BkOdbf
+    cipher: chacha20-ietf-poly1305
+  - name: _Alirewa-65
+    type: ss
+    server: series-a2-mec.samanehha.co
+    port: 443
+    password: u17T3BvpYaaiuW2c
+    cipher: chacha20-ietf-poly1305
+  - name: _Alirewa-66
+    type: ss
+    server: 52.142.161.9
+    port: 34424
+    password: 64LbKHnB3IO759ueEnhgMG
+    cipher: chacha20-ietf-poly1305
+  - name: ____ViPVpn_v2ray
+    type: vmess
+    server: web.miladvip.shop
+    port: 8080
+    uuid: 1b0fda80-506d-4e1f-eb5f-583994d47d46
+    alterId: 0
+    cipher: auto
+  - name: ____ViPVpn_v2ray_1
+    type: vmess
+    server: web.miladvip.shop
+    port: 443
+    uuid: 0777ac40-15f6-4d57-e4be-09054b60163e
+    alterId: 0
+    cipher: auto
+  - name: test1_sell_vipvpn
+    type: vmess
+    server: sellvipvpn.myiran1.pw
+    port: 2087
+    uuid: 0d0ce300-7489-4b6c-bc5a-4af3a5694c0c
+    alterId: 0
+    cipher: auto
+  - name: test2_sell_vipvpn
+    type: vmess
+    server: sellvipvpn.myiran1.pw
+    port: 2083
+    uuid: 3390a631-90cf-48b3-cd13-3ad559f01796
+    alterId: 0
+    cipher: auto
+  - name: test3_sell_vipvpn
+    type: vmess
+    server: sellvipvpn.myiran1.pw
+    port: 2053
+    uuid: 8a90c6d7-58da-4248-d024-574a1d3f3260
+    alterId: 0
+    cipher: auto
+  - name: _Alirewa-87
+    type: ss
+    server: 85.239.239.182
+    port: 16309
+    password: c3462d3f6020528d
+    cipher: chacha20-ietf-poly1305
+  - name: _Alirewa-93
+    type: ss
+    server: 136.243.249.198
+    port: 443
+    password: h8j6e3xuihn2epl9
+    cipher: aes-256-gcm
+  - name: _Alirewa-95
+    type: ss
+    server: 16.171.44.134
+    port: 443
+    password: k8IgRTFAIZdpbdRBVtNQpsYvc9ey30MXxTXzjhRs0Uw=
+    cipher: 2022-blake3-aes-256-gcm
+  - name: _Alirewa-99
+    type: trojan
+    server: 104.25.239.113
+    port: 2053
+    password: gHQP0D7D15
+    servername: marvdasht.phonecomparisonblog.org
+    skip-cert-verify: false
+    client-fingerprint: chrome
+    network: ws
+    ws-path: /
+    ws-headers: {}
+  - name: _Alirewa-100
+    type: ss
+    server: 23.230.52.119
+    port: 42878
+    password: ijoUwfdnkz7mX4pWdkSpmEixTZCt2TRm1JDr4BSaBAWkLxYGoXBHXadFKY5D5ZfoVTwqsx46jCmEUDnQUizJDYrM7B5anhnu
+    cipher: chacha20-ietf-poly1305
+  - name: _Alirewa-108
+    type: ss
+    server: 152.53.1.57
+    port: 8388
+    password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
+    cipher: chacha20-ietf-poly1305
+  - name: _____Join_Telegram__Farah_VPN_____
+    type: vmess
+    server: dog-hk.kunlun01dns.com
+    port: 21022
+    uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
+    alterId: 0
+    cipher: auto
+  - name: _Alirewa-111
+    type: ss
+    server: 158.173.20.208
+    port: 443
+    password: shadowsocks
+    cipher: aes-128-gcm
+  - name: _Alirewa-113
+    type: ss
+    server: 82.38.31.155
+    port: 8080
+    password: oZIoA69Q8yhcQV8ka3Pa3A
+    cipher: chacha20-ietf-poly1305
+  - name: _Alirewa-121
+    type: trojan
+    server: en001.zestapp778.com
+    port: 29813
+    password: 5t6i121em5lkmsmk
+    servername: en001.zestapp778.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+  - name: _Alirewa-122
+    type: trojan
+    server: Sclass-00.catcat321.com
+    port: 20123
+    password: d9064589-74af-432a-9390-5d8a9da281bf
+    servername: hk.catxstar.com
+    skip-cert-verify: false
+    client-fingerprint: chrome
+  - name: _Alirewa-124
+    type: ss
+    server: 154.36.158.197
+    port: 8388
+    password: BeaUf9c0AEWH40Pu
+    cipher: aes-256-gcm
+  - name: _Alirewa-125
+    type: ss
+    server: 51.79.85.185
+    port: 8118
+    password: cdBIDV42DCwnfIN
+    cipher: aes-256-gcm
+  - name: _Alirewa-129
+    type: trojan
+    server: 188.114.97.80
+    port: 443
+    password: 98b77ca9-93b6-4bc5-941f-312ec6d585e4
+    servername: zaked-95e4.wopecuyubak61.workers.dev
+    skip-cert-verify: false
+    client-fingerprint: unsafe
+    network: ws
+    ws-path: /stream/DEVCOP/312ec6d585e4/loc-0?ed=2048
+    ws-headers:
+      Host: zaked-95e4.wopecuyubak61.workers.dev
+  - name: _Shh_Proxy-New_
+    type: vmess
+    server: 31.77.8.97
+    port: 110
+    uuid: d2d8601b-c14b-42c6-b8ea-33889bce152a
+    alterId: 0
+    cipher: auto
+  - name: _________________injastvpn_
+    type: vmess
+    server: 4rd1-do.infospeedtest.com
+    port: 11577
+    uuid: 6b788668-c3cf-4754-afdb-a172248e0ac8
+    alterId: 0
+    cipher: auto
+  - name: PS-DE-1
+    type: socks5
+    server: 161.35.70.249
+    port: 1080
+  - name: PS-DE-2
+    type: socks5
+    server: 31.58.144.19
+    port: 1080
+  - name: PS-IN-3
+    type: socks5
+    server: 139.59.1.14
+    port: 1080
+  - name: PS-DE-4
+    type: socks5
+    server: 31.58.144.15
+    port: 1080
+  - name: PS-US-5
+    type: socks5
+    server: 209.97.150.167
+    port: 1080
+  - name: PS-US-6
+    type: socks5
+    server: 198.199.86.11
+    port: 1080
+  - name: PS-IT-7
+    type: socks5
+    server: 212.77.75.25
+    port: 1088
+  - name: PS-US-8
+    type: socks5
+    server: 138.68.60.8
+    port: 1080
+  - name: PS-CA-9
+    type: socks5
+    server: 159.203.61.169
+    port: 1080
+  - name: PS-SG-10
+    type: socks5
+    server: 128.199.202.122
+    port: 1080
+  - name: PS-US-11
+    type: socks5
+    server: 107.174.30.92
+    port: 1080
+  - name: PS-US-12
+    type: socks5
+    server: 50.222.120.243
+    port: 1080
+  - name: PS-US-13
+    type: socks5
+    server: 69.55.49.177
+    port: 38182
+  - name: PS-US-14
+    type: socks5
+    server: 192.111.130.5
+    port: 17002
+  - name: PS-US-15
+    type: socks5
+    server: 192.252.211.193
+    port: 4145
+  - name: PS-US-16
+    type: socks5
+    server: 199.58.184.97
+    port: 4145
+  - name: PS-US-17
+    type: socks5
+    server: 199.58.185.9
+    port: 4145
+  - name: PS-US-18
+    type: socks5
+    server: 192.252.215.2
+    port: 4145
+  - name: PS-US-19
+    type: socks5
+    server: 192.252.214.17
+    port: 4145
+  - name: PS-US-20
+    type: socks5
+    server: 192.252.215.5
+    port: 16137
+  - name: PS-US-21
+    type: socks5
+    server: 198.8.94.174
+    port: 39078
+  - name: PS-US-22
+    type: socks5
+    server: 184.170.245.148
+    port: 4145
+  - name: PS-US-23
+    type: socks5
+    server: 192.111.130.2
+    port: 4145
+  - name: PS-US-24
+    type: socks5
+    server: 192.111.137.34
+    port: 18765
+  - name: PS-US-25
+    type: socks5
+    server: 192.111.129.145
+    port: 16894
+  - name: PS-US-26
+    type: socks5
+    server: 192.252.208.70
+    port: 14282
+  - name: PS-US-27
+    type: socks5
+    server: 192.111.139.162
+    port: 4145
+  - name: PS-US-28
+    type: socks5
+    server: 192.111.135.17
+    port: 18302
+  - name: PS-US-29
+    type: socks5
+    server: 192.252.209.155
+    port: 14455
+  - name: PS-US-30
+    type: socks5
+    server: 192.111.139.163
+    port: 19404
+  - name: PS-US-31
+    type: socks5
+    server: 192.111.137.37
+    port: 18762
+  - name: PS-US-32
+    type: socks5
+    server: 198.8.94.170
+    port: 4145
+  - name: PS-US-33
+    type: socks5
+    server: 192.252.208.67
+    port: 14287
+  - name: PS-US-34
+    type: socks5
+    server: 199.229.254.129
+    port: 4145
+  - name: PS-US-35
+    type: socks5
+    server: 192.252.209.158
+    port: 4145
+  - name: PS-US-36
+    type: socks5
+    server: 184.170.251.30
+    port: 11288
+  - name: PS-US-37
+    type: socks5
+    server: 199.116.112.6
+    port: 4145
+  - name: PS-US-38
+    type: socks5
+    server: 74.119.144.60
+    port: 4145
+  - name: PS-US-39
+    type: socks5
+    server: 74.119.147.209
+    port: 4145
+  - name: PS-US-40
+    type: socks5
+    server: 192.111.138.29
+    port: 4145
+  - name: PS-US-41
+    type: socks5
+    server: 184.170.249.65
+    port: 4145
+  - name: PS-US-42
+    type: socks5
+    server: 192.111.139.165
+    port: 4145
+  - name: PS-US-43
+    type: socks5
+    server: 184.170.248.5
+    port: 4145
+  - name: PS-US-44
+    type: socks5
+    server: 192.252.216.81
+    port: 4145
+  - name: PS-US-45
+    type: socks5
+    server: 192.252.216.86
+    port: 4145
+  - name: PS-US-46
+    type: socks5
+    server: 206.220.175.2
+    port: 4145
+  - name: PS-US-47
+    type: socks5
+    server: 199.187.210.54
+    port: 4145
+  - name: PS-US-48
+    type: socks5
+    server: 107.181.161.81
+    port: 4145
+  - name: PS-US-49
+    type: socks5
+    server: 67.201.39.14
+    port: 4145
+  - name: PS-US-50
+    type: socks5
+    server: 142.54.235.9
+    port: 4145
+proxy-groups:
+  - name: PROXY
+    type: url-test
+    proxies: &ref_0
+      - DeVPN-KR-0
+      - DeVPN-KR-1
+      - DeVPN-KR-2
+      - DeVPN-KR-3
+      - DeVPN-KR-4
+      - DeVPN-KR-5
+      - DeVPN-KR-6
+      - DeVPN-KR-7
+      - DeVPN-KR-8
+      - DeVPN-KR-9
+      - DeVPN-SG-0
+      - DeVPN-SG-1
+      - DeVPN-SG-2
+      - DeVPN-SG-3
+      - DeVPN-SG-4
+      - DeVPN-SG-5
+      - DeVPN-SG-6
+      - DeVPN-SG-7
+      - DeVPN-SG-8
+      - DeVPN-SG-9
+      - DeVPN-JP-0
+      - DeVPN-JP-1
+      - DeVPN-JP-2
+      - DeVPN-JP-3
+      - DeVPN-JP-4
+      - DeVPN-JP-5
+      - DeVPN-JP-6
+      - DeVPN-JP-7
+      - DeVPN-JP-8
+      - DeVPN-JP-9
+      - DeVPN-DE-0
+      - DeVPN-DE-1
+      - DeVPN-DE-2
+      - DeVPN-DE-3
+      - DeVPN-DE-4
+      - DeVPN-DE-5
+      - DeVPN-DE-6
+      - DeVPN-DE-7
+      - DeVPN-DE-8
+      - DeVPN-DE-9
+      - DeVPN-HK-0
+      - DeVPN-HK-1
+      - DeVPN-HK-2
+      - DeVPN-HK-3
+      - DeVPN-HK-4
+      - DeVPN-HK-5
+      - DeVPN-HK-6
+      - DeVPN-HK-7
+      - DeVPN-HK-8
+      - DeVPN-HK-9
+      - DeVPN-US-0
+      - DeVPN-US-1
+      - DeVPN-US-2
+      - DeVPN-US-3
+      - DeVPN-US-4
+      - DeVPN-US-5
+      - DeVPN-US-6
+      - DeVPN-US-7
+      - DeVPN-US-8
+      - DeVPN-US-9
+      - DeVPN-ID-0
+      - DeVPN-ID-1
+      - DeVPN-ID-2
+      - DeVPN-ID-3
+      - DeVPN-ID-4
+      - DeVPN-ID-5
+      - DeVPN-ID-6
+      - DeVPN-ID-7
+      - DeVPN-ID-8
+      - DeVPN-ID-9
+      - NewYork_PAC
+      - Singapore
+      - Japan
+      - HongKong
+      - France
+      - Thailand
+      - Australia
+      - Montreal
+      - Italy
+      - British
+      - HongKong_1
+      - Russia
+      - shadowsocks-1827146270
+      - shadowsocks-1870576255
+      - shadowsocks-1870576345
+      - shadowsocks-1827963705
+      - shadowsocks-1827962976
+      - shadowsocks-1827963676
+      - shadowsocks-1827969041
+      - shadowsocks-1827146549
+      - shadowsocks-1827146742
+      - shadowsocks-1827146667
+      - shadowsocks-1827146815
+      - shadowsocks-1827147187
+      - shadowsocks-1827964140
+      - shadowsocks-1875023016
+      - shadowsocks-1827146083
+      - shadowsocks-1875023048
+      - shadowsocks-1827146769
+      - shadowsocks-1827146486
+      - shadowsocks-1827145981
+      - shadowsocks-1827145964
+      - shadowsocks-1827146086
+      - shadowsocks-1827146026
+      - shadowsocks-1827147777
+      - trojan-1939846065
+      - trojan-1827188340
+      - vmess-1837386984
+      - vmess-1853342713
+      - vmess-1853348092
+      - shadowsocks-1827146287
+      - shadowsocks-1827146197
+      - shadowsocks-1827146224
+      - shadowsocks-1827146248
+      - shadowsocks-1875023009
+      - shadowsocks-1875023013
+      - shadowsocks-1830344687
+      - trojan-1932509804
+      - vmess-1827158757
+      - vmess-1853348260
+      - vmess-1828338235
+      - shadowsocks-1827146336
+      - shadowsocks-1828226964
+      - shadowsocks-1827146556
+      - shadowsocks-1827146122
+      - shadowsocks-1827147479
+      - shadowsocks-1875022941
+      - shadowsocks-1827146619
+      - shadowsocks-1827145971
+      - trojan-1827149654
+      - trojan-1939846054
+      - trojan-1849374991
+      - trojan-1946595155
+      - _Alirewa-3
+      - _ConfigforVPN
+      - _ConfigforVPN_1
+      - _Alirewa-11
+      - _Alirewa-18
+      - _Alirewa-33
+      - _Alirewa-38
+      - _Alirewa-40
+      - _Alirewa-41
+      - _Alirewa-44
+      - _Alirewa-45
+      - _Alirewa-47
+      - _Alirewa-48
+      - _Alirewa-65
+      - _Alirewa-66
+      - ____ViPVpn_v2ray
+      - ____ViPVpn_v2ray_1
+      - test1_sell_vipvpn
+      - test2_sell_vipvpn
+      - test3_sell_vipvpn
+      - _Alirewa-87
+      - _Alirewa-93
+      - _Alirewa-95
+      - _Alirewa-99
+      - _Alirewa-100
+      - _Alirewa-108
+      - _____Join_Telegram__Farah_VPN_____
+      - _Alirewa-111
+      - _Alirewa-113
+      - _Alirewa-121
+      - _Alirewa-122
+      - _Alirewa-124
+      - _Alirewa-125
+      - _Alirewa-129
+      - _Shh_Proxy-New_
+      - _________________injastvpn_
+      - PS-DE-1
+      - PS-DE-2
+      - PS-IN-3
+      - PS-DE-4
+      - PS-US-5
+      - PS-US-6
+      - PS-IT-7
+      - PS-US-8
+      - PS-CA-9
+      - PS-SG-10
+      - PS-US-11
+      - PS-US-12
+      - PS-US-13
+      - PS-US-14
+      - PS-US-15
+      - PS-US-16
+      - PS-US-17
+      - PS-US-18
+      - PS-US-19
+      - PS-US-20
+      - PS-US-21
+      - PS-US-22
+      - PS-US-23
+      - PS-US-24
+      - PS-US-25
+      - PS-US-26
+      - PS-US-27
+      - PS-US-28
+      - PS-US-29
+      - PS-US-30
+      - PS-US-31
+      - PS-US-32
+      - PS-US-33
+      - PS-US-34
+      - PS-US-35
+      - PS-US-36
+      - PS-US-37
+      - PS-US-38
+      - PS-US-39
+      - PS-US-40
+      - PS-US-41
+      - PS-US-42
+      - PS-US-43
+      - PS-US-44
+      - PS-US-45
+      - PS-US-46
+      - PS-US-47
+      - PS-US-48
+      - PS-US-49
+      - PS-US-50
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+  - name: 手动选择
+    type: select
+    proxies: *ref_0
+  - name: 故障转移
+    type: fallback
+    proxies: *ref_0
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+  - name: 负载均衡
+    type: load-balance
+    proxies: *ref_0
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    strategy: round-robin
+  - name: 国内直连
+    type: select
+    proxies:
+      - DIRECT
+rules:
+  - DOMAIN-KEYWORD,facebook,PROXY
+  - DOMAIN-KEYWORD,google,PROXY
+  - DOMAIN-KEYWORD,gmail,PROXY
+  - DOMAIN-KEYWORD,twitter,PROXY
+  - DOMAIN-KEYWORD,youtube,PROXY
+  - DOMAIN-KEYWORD,instagram,PROXY
+  - DOMAIN-KEYWORD,telegram,PROXY
+  - DOMAIN-KEYWORD,whatsapp,PROXY
+  - DOMAIN-KEYWORD,netflix,PROXY
+  - DOMAIN-KEYWORD,spotify,PROXY
+  - DOMAIN-KEYWORD,github,PROXY
+  - DOMAIN-KEYWORD,cloudflare,PROXY
+  - DOMAIN-SUFFIX,google.com,PROXY
+  - DOMAIN-SUFFIX,youtube.com,PROXY
+  - DOMAIN-SUFFIX,facebook.com,PROXY
+  - DOMAIN-SUFFIX,twitter.com,PROXY
+  - DOMAIN-SUFFIX,instagram.com,PROXY
+  - DOMAIN-SUFFIX,telegram.org,PROXY
+  - DOMAIN-SUFFIX,whatsapp.com,PROXY
+  - DOMAIN-SUFFIX,netflix.com,PROXY
+  - DOMAIN-SUFFIX,spotify.com,PROXY
+  - DOMAIN-SUFFIX,github.com,PROXY
+  - DOMAIN-SUFFIX,cloudflare.com,PROXY
+  - DOMAIN-SUFFIX,github.io,PROXY
+  - DOMAIN-SUFFIX,vercel.app,PROXY
+  - DOMAIN-SUFFIX,workers.dev,PROXY
+  - DOMAIN-SUFFIX,openai.com,PROXY
+  - DOMAIN-SUFFIX,anthropic.com,PROXY
+  - DOMAIN-SUFFIX,claude.ai,PROXY
+  - DOMAIN-SUFFIX,chatgpt.com,PROXY
+  - DOMAIN-SUFFIX,oaistatic.com,PROXY
+  - DOMAIN-SUFFIX,oaiusercontent.com,PROXY
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-SUFFIX,baidu.com,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,weixin.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+  - DOMAIN-SUFFIX,163.com,DIRECT
+  - DOMAIN-SUFFIX,sina.com,DIRECT
+  - DOMAIN-SUFFIX,sohu.com,DIRECT
+  - DOMAIN-SUFFIX,ifeng.com,DIRECT
+  - DOMAIN-SUFFIX,people.com.cn,DIRECT
+  - DOMAIN-SUFFIX,xinhuanet.com,DIRECT
+  - DOMAIN-SUFFIX,chinanews.com,DIRECT
+  - DOMAIN-SUFFIX,aliyun.com,DIRECT
+  - DOMAIN-SUFFIX,tencent.com,DIRECT
+  - DOMAIN-SUFFIX,cloud.tencent.com,DIRECT
+  - DOMAIN-SUFFIX,cnblogs.com,DIRECT
+  - DOMAIN-SUFFIX,csdn.net,DIRECT
+  - DOMAIN-SUFFIX,zhihu.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,acfun.cn,DIRECT
+  - DOMAIN-SUFFIX,douyin.com,DIRECT
+  - DOMAIN-SUFFIX,kuaishou.com,DIRECT
+  - DOMAIN-SUFFIX,weibo.com,DIRECT
+  - DOMAIN-SUFFIX,toutiao.com,DIRECT
+  - DOMAIN-SUFFIX,meituan.com,DIRECT
+  - DOMAIN-SUFFIX,dianping.com,DIRECT
+  - DOMAIN-SUFFIX,ctrip.com,DIRECT
+  - DOMAIN-SUFFIX,fliggy.com,DIRECT
+  - DOMAIN-SUFFIX,12306.cn,DIRECT
+  - DOMAIN-SUFFIX,bankcomm.com,DIRECT
+  - DOMAIN-SUFFIX,icbc.com.cn,DIRECT
+  - DOMAIN-SUFFIX,cmbchina.com,DIRECT
+  - DOMAIN-SUFFIX,ccb.com,DIRECT
+  - DOMAIN-SUFFIX,abcchina.com,DIRECT
+  - DOMAIN-SUFFIX,boc.cn,DIRECT
+  - GEOSITE,CN,DIRECT
+  - GEOIP,CN,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+  - IP-CIDR6,::1/128,DIRECT
+  - IP-CIDR6,fc00::/7,DIRECT
+  - IP-CIDR6,fe80::/10,DIRECT
+  - MATCH,PROXY
